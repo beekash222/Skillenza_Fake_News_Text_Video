@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<div>
+ <h1 align="center">Coders Vs Covid | Online Hackathon
+  <img src="{{ url_for('static', filename='new4.png') }}"  style="width:200px;height:80px; align="right"/></h1>
+ </div>
+ 
+  <meta charset="UTF-8">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<div>
+<h4 align="left">TEAM:
+  <img src="{{ url_for('static', filename='new.png') }}"  style="width:90px;height:70px; align="right"/>
+  <img src="{{ url_for('static', filename='new1.png') }}"  style="width:90px;height:70px; align="left-side"/>
+  <img src="{{ url_for('static', filename='new_2_new.png') }}"  style="width:90px;height:70px; align="left-side"/>
+  <h4 align="left">#codeagainstcovid</h4>
+  <h4 align="left">#CodeKaroNa</h4>
+  <h4 align="left">#stayhomestaysafe</h4>
+  </h4>
+</div>
+
+
+
+<body>
+
+
+ <div class="login">
+	
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+          					       <h4 align="left">Predict Fake News </h4>
+         	<input  type="text" name="Author" placeholder="Enter the Author name" required="required" />
+		<input type="text" name="Title" placeholder="Enter the Title" required="required" />
+		<input type="text" name="Text" placeholder="Enter the Text" required="required" /> 
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+    </form>
+    <form action="{{ url_for('predict1')}}"method="post">
+        <h4 align="left">Predict Fake You-Tube Videos </h4>
+    	<input  type="text" name="video_id" placeholder="Enter the video url" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+    </form>
+     <p>{{ prediction_text }}</p>
+     <p>{{ para }}</p>
+     <p>{{ para1 }}</p>
+  
+ </div>
+
+
+</body>
+
+</html>
