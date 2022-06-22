@@ -3,7 +3,7 @@ Flask-Cors==3.0.8
 Flask-RESTful==0.3.7
 glob2==0.6
 lightgbm==2.3.1
-numpy==1.14.5
+numpy==1.22.0
 pandas==0.24.2
 requests==2.21.0
 nltk==3.4
